@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
+// Components
+import CardDisplay from '../CardDisplay/CardDisplay';
+
 class CardListDisplay extends Component {
     constructor(){
         super();
@@ -12,7 +15,10 @@ class CardListDisplay extends Component {
 
     render(){
         return (
-            <h1>CardListDisplay</h1>
+            <div>
+                <h2>CardListDisplay</h2>
+                <CardDisplay />
+            </div>
         )
     }
 }
