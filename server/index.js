@@ -19,10 +19,10 @@ app.put('/api/updateList/:id', listCon.updateList); // UPDATE - SPECIFIC LIST BY
 app.delete('/api/deleteList/:id', listCon.deleteList); // DELETE - SPECIFIC LIST BY ID
 
 // CARD ENDPOINTS
-// Create endpoint // CREATE - NEW CARD IN LIST
-// Create endpoint // READ - ALL CARDS IN LIST
-// Create endpoint // UPDATE - SPECIFIC CARD BY LIST AND ID
-// Create endpoint // DELETE - SPECIFIC CARD BY LIST AND ID
+app.post('/api/addCard/:listID', cardCon.addCard) // CREATE - NEW CARD IN LIST
+app.get('/api/cards/:listID', cardCon.getCards) // READ - ALL CARDS IN LIST
+app.put('/api/updateCard/:listID/:cardID', cardCon.updateCard) // UPDATE - SPECIFIC CARD BY LIST AND ID
+app.delete('/api/deleteCard/:listID/:cardID', cardCon.deleteCard) // DELETE - SPECIFIC CARD BY LIST AND ID
 
 // SERVER RUNNING AND LISTENING
 const PORT = 3050;
