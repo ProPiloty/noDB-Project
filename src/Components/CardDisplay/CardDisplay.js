@@ -5,8 +5,12 @@ class CardDisplay extends Component {
     constructor(){
         super();
         this.state = {
-
+            cards: [],
         }
+    }
+
+    componentDidMount(){
+        
     }
 
     render(){

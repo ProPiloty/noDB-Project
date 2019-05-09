@@ -8,16 +8,26 @@ class BoardListDisplay extends Component {
     constructor(){
         super();
 
-        this.setState = {
-
+        this.state = {
+            lists: [],
         }
+    };
+
+    componentDidMount(){
+        axios.get('/api/lists')
+        .then((res) => {this.setState({ lists: res.data })});
     }
 
     render(){
+        const listDisplay = this.state.lists.map((list) => (
+            <div>
+                <h1>{list.listTitle}</h1>
+                <CardListDisplay listID={list.listID} />
+            </div>
+        ))
         return (
             <div>
-                <h1>BoardListDisplay</h1>
-                <CardListDisplay />
+                {listDisplay}
             </div>
         )
     }
