@@ -12,7 +12,6 @@ module.exports = {
             cardDescription: req.body.cardDescription,
         }
         data.sampleData[listIndex].cards.push(newCard);
-        console.log(data.sampleData[listIndex].cards)
         res.status(200).send(data.sampleData[listIndex].cards[data.sampleData[listIndex].cards.length - 1]);
     },
     getCards: (req, res) => {

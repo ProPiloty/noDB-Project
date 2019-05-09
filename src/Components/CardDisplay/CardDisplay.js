@@ -5,17 +5,26 @@ class CardDisplay extends Component {
     constructor(){
         super();
         this.state = {
-            cards: [],
+            editCard: false,
         }
     }
 
-    componentDidMount(){
-        
-    }
-
     render(){
+        const {card} = this.props;
         return(
-            <h3>CardDisplay</h3>
+            <div>
+                {
+                    !this.state.editCard ?
+                    <div>
+                        <h3>{card.cardTitle}</h3>
+                        <p>{card.cardDescription}</p>
+                    </div>
+                    :
+                    <div>
+                        <h3>yes edit</h3>
+                    </div>
+                }
+            </div>
         )
     }
 }

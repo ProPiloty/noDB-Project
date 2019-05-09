@@ -9,15 +9,25 @@ class CardListDisplay extends Component {
         super();
 
         this.state = {
-
+            cards: [],
         }
     }
 
+    componentDidMount(){
+        axios.get(`/api/cards/${this.props.listID}`)
+        .then((res) => {this.setState({ cards: res.data })})
+        .catch((err) => {alert(err)});
+    }
+
     render(){
+        const cardList = this.state.cards.map((card) => (
+            <div key={card.cardID}>
+                <CardDisplay card={card} />
+            </div>
+        ))
         return (
             <div>
-                <h2>CardListDisplay</h2>
-                <CardDisplay />
+                {cardList}
             </div>
         )
     }

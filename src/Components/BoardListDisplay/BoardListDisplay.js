@@ -15,12 +15,13 @@ class BoardListDisplay extends Component {
 
     componentDidMount(){
         axios.get('/api/lists')
-        .then((res) => {this.setState({ lists: res.data })});
+        .then((res) => {this.setState({ lists: res.data })})
+        .catch((err) => {alert(err)});
     }
 
     render(){
         const listDisplay = this.state.lists.map((list) => (
-            <div>
+            <div key={list.listID}>
                 <h1>{list.listTitle}</h1>
                 <CardListDisplay listID={list.listID} />
             </div>

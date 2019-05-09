@@ -21,7 +21,8 @@ module.exports = {
         res.status(200).send(data.sampleData[index]);
     },
     deleteList: (req, res) => {
-        const deleteListIndex = data.sampleData.findIndex((list) => (list.listID === parseInt(req.params.id)));
+        const {id} = req.params;
+        const deleteListIndex = data.sampleData.findIndex((list) => (list.listID === parseInt(id)));
         data.sampleData.splice(deleteListIndex, 1);
         res.status(200).send(data.sampleData);
     }
