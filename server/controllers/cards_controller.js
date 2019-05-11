@@ -12,7 +12,7 @@ module.exports = {
             cardDescription: req.body.cardDescription,
         }
         data.sampleData[listIndex].cards.push(newCard);
-        res.status(200).send(data.sampleData[listIndex].cards[data.sampleData[listIndex].cards.length - 1]);
+        res.status(200).send(data.sampleData[listIndex].cards);
     },
     getCards: (req, res) => {
         const listIndex = data.sampleData.findIndex((list) => (list.listID === +req.params.listID));
@@ -24,7 +24,7 @@ module.exports = {
         const cardIndex = data.sampleData[listIndex].cards.findIndex((card) => (card.cardID === +req.params.cardID));
         data.sampleData[listIndex].cards[cardIndex].cardTitle = req.body.cardTitle;
         data.sampleData[listIndex].cards[cardIndex].cardDescription = req.body.cardDescription;
-        res.status(200).send(data.sampleData[listIndex].cards[cardIndex]);
+        res.status(200).send(data.sampleData[listIndex].cards);
     },
     deleteCard: (req, res) => {
         const listIndex = data.sampleData.findIndex((list) => (list.listID === +req.params.listID));
