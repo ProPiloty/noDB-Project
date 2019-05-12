@@ -1,0 +1,80 @@
+.ListDisplay {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 90vh;
+    margin: 0 1vw;
+    overflow-y: scroll;
+    background: #8b8c8c;
+    border-radius: 4px;
+}
+
+.nonEditTopper {
+    display: flex;
+    justify-content: space-between;
+    background: #E8E8E8;
+    margin: 1vh 1vw;
+    padding: 1vh 1vw;
+    border-radius: 4px;
+}
+
+.nonEditTopperH1 {
+    font-size: 20px;
+    font-weight: 700;
+    width: 80%;
+    color: #2D3142;
+}
+
+.nonEditTopperEdit {
+    width: 20%;
+    border: 1px solid #2D3142;
+    background: #EF8354;
+    color: #2D3142;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* DISPLAYS IF EDITLIST IS TRUE */
+.editTopper {
+    display: flex;
+    justify-content: space-between;
+    background: #E8E8E8;
+    margin: 1vh 1vw;
+    padding: 1vh 1vw;
+    border-radius: 4px;
+}
+
+.editTopperInput {
+    width: 55%;
+    border: 1px solid #2D3142;
+    border-right: none;
+    background: #e8e8e8;
+    font-weight: 700;
+}
+
+.editTopperSubmit {
+    width: 25%;
+    border: 1px solid #2D3142;
+    border-right: none;
+    background: #4F5D75;
+    color: #E8E8E8;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.editTopperDelete {
+    width: 20%;
+    border: 1px solid #2D3142;
+    background: red;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* DISPLAYS AFTER LIST TOPPER AND BEFORE CARD MAPPER */
+.ListDisplayHR {
+    border: 0;
+    height: 3px;
+    width: 100%;
+    background: #EF8354;
+}

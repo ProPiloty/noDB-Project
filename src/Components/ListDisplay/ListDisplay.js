@@ -50,32 +50,24 @@ class ListDisplay extends Component {
         const {editList, listID, listTitle, cards} = this.state;
 
         return(
-            <div>
+            <div className="ListDisplay">
                 {
                     !editList ?
-                    <div>
-                        <div>
-                            <h1>{listTitle}</h1>
-                            <button onClick={this.toggleEdit}>Edit</button>
-                        </div>
-                        <hr></hr>
-                        <div>
-                            <CardMapper cards={cards} listID={listID} />
-                        </div>
+                    <div className="nonEditTopper">
+                        <h1 className="nonEditTopperH1">{listTitle}</h1>
+                        <button onClick={this.toggleEdit} className="nonEditTopperEdit">Edit</button>
                     </div>
                     :
-                    <div>
-                        <div>
-                            <input value={listTitle} name="listTitle" onChange={this.handleInputChange} />
-                            <button onClick={this.updateList}>Submit</button>
-                            <button onClick={this.deleteList}>Delete</button>
-                        </div>
-                        <hr></hr>
-                        <div>
-                            <CardMapper cards={cards} listID={listID} />
-                        </div>
+                    <div className="editTopper">
+                        <input value={listTitle} name="listTitle" onChange={this.handleInputChange} className="editTopperInput" />
+                        <button onClick={this.updateList} className="editTopperSubmit">Submit</button>
+                        <button onClick={this.deleteList} className="editTopperDelete">Delete</button>
                     </div>
                 }
+                <hr className="ListDisplayHR"></hr>
+                <div>
+                    <CardMapper cards={cards} listID={listID} />
+                </div>
             </div>
         )
     }

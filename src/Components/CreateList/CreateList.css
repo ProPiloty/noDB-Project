@@ -1,0 +1,46 @@
+.CreateList {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 8vh;
+    margin: 0 1vw;
+    background: #8b8c8c;
+    border-radius: 4px;
+}
+
+.CreateListForm {
+    width: 21vw;
+    display: flex;
+    justify-content: space-between;
+    background: #E8E8E8;
+    color:#2D3142;
+    margin: 1vh 1vw;
+    padding: 1vh 1vw;
+    border-radius: 4px;
+}
+
+.CreateListHr {
+    border: none;
+    height: 3px;
+    background: #EF8354;
+    width: 100%;
+}
+
+.createListInput {
+    background: #e8e8e8;
+    color:#2D3142;
+    width: 75%;
+    border: 1px solid #2D3142;
+    border-right: none;
+    font-weight: 700;
+}
+
+.createListAdd {
+    width: 25%;
+    border: 1px solid #2D3142;
+    border-right: none;
+    background: #4F5D75;
+    color: #E8E8E8;
+    text-transform: uppercase;
+    font-weight: 700;
+}

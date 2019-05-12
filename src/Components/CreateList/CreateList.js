@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+// STYLESHEET
+import './CreateList.css';
+
 class CreateList extends Component {
     constructor(){
         super();
@@ -27,13 +30,15 @@ class CreateList extends Component {
         }
     }
 
-
     render(){
         return (
-            <form>
-                <input name="listTitle" type="text" onChange={this.handleInputChange} value={this.state.listTitle} />
-                <button onClick={this.handleAddList}>Create List</button>
-            </form>
+            <div className="CreateList">
+                <form className="CreateListForm">
+                    <input name="listTitle" type="text" onChange={this.handleInputChange} value={this.state.listTitle} placeholder="List Title" className="createListInput" />
+                    <button onClick={this.handleAddList} className="createListAdd">Add List</button>
+                </form>
+                <hr className="CreateListHr"></hr>
+            </div>
         )
     }
 }

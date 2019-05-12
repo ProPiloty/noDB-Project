@@ -50,26 +50,27 @@ class CardDisplay extends Component {
     render(){
         const {card} = this.props;
         return(
-            <div>
+            <div className="CardDisplay">
                 {
                     !this.state.editCard ?
-                    <div>
-                        <div>
-                            <h3>{card.cardTitle}</h3>
-                            <button onClick={this.toggleEdit}>Edit Card</button>
+                    <div className="nonEditCard">
+                        <div className="nonEditTop">
+                            <h3 className="nonEditH3">{card.cardTitle}</h3>
+                            <button onClick={this.toggleEdit}className="nonEditEdit">edit</button>
                         </div>
-                        <div>
+                        <hr className="cardHR"></hr>
+                        <div className="nonEditBottom">
                             <p>{card.cardDescription}</p>
                         </div>
                     </div>
                     :
-                    <div>
-                        <form>
-                            <input value={this.state.cardTitle} name="cardTitle" onChange={this.handleInputChange} />
-                            <textarea value={this.state.cardDescription} name="cardDescription" onChange={this.handleInputChange} />
-                            <div>
-                                <button onClick={this.updateCard}>Submit</button>
-                                <button onClick={this.deleteCard}>Delete Card</button>
+                    <div className="editCard">
+                        <form className="editCardForm">
+                            <input value={this.state.cardTitle} name="cardTitle" onChange={this.handleInputChange} className="editCardInput" />
+                            <textarea value={this.state.cardDescription} name="cardDescription" onChange={this.handleInputChange}  className="editCardArea" />
+                            <div className="editCardFormButtons">
+                                <button onClick={this.updateCard} className="editCardSubmit">Submit</button>
+                                <button onClick={this.deleteCard} className="editCardDelete">Delete</button>
                             </div>
                         </form>
                     </div>

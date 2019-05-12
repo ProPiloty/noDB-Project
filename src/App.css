@@ -1,2 +1,9 @@
 .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #4F5D75;
+    height: 100vh;
+    width: 100vw;
 }

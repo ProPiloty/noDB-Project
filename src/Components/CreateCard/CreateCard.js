@@ -34,12 +34,11 @@ class CreateCard extends Component {
 
     render(){
         return (
-            <div>
-                <hr></hr>
-                <form onSubmit={this.handleAddCard}>
-                    <input type="text" name="cardTitle" placeholder="Card Title" onChange={this.handleUpdateInput} value={this.state.cardTitle} />
-                    <textarea type="text" name="cardDescription" placeholder="Card Description" onChange={this.handleUpdateInput} value={this.state.cardDescription} />
-                    <button>Add Card</button>
+            <div className="CreateCard">
+                <form onSubmit={this.handleAddCard} className="CreateCardForm" >
+                    <input type="text" name="cardTitle" placeholder="Card Title" onChange={this.handleUpdateInput} value={this.state.cardTitle} className="CreateCardInput" />
+                    <textarea type="text" name="cardDescription" placeholder="Card Description" onChange={this.handleUpdateInput} value={this.state.cardDescription} className="CreateCardArea" />
+                    <button className="CreateCardAdd">add card</button>
                 </form>
             </div>
         )

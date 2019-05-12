@@ -7,13 +7,15 @@ import './App.css';
 // COMPONENTS
 import Header from './Components/Header/Header';
 import ListMapper from './Components/ListMapper/ListMapper';
+import Footer from './Components/Footer/Footer';
 
 // FUNCTIONAL COMPONENT DEFINITION
 function App() {
   return (
-    <section className="app">
+    <section className="App">
       <Header />
       <ListMapper />
+      <Footer />
     </section>
   );
 }

@@ -58,10 +58,10 @@ class ListMapper extends Component {
         ));
 
         return (
-            <div>
+            <section className="ListMapper">
                 {listDisplay}
                 <CreateList addList={this.addList} />
-            </div>
+            </section>
         );
     };
 };

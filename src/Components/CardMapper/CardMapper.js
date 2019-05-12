@@ -68,6 +68,7 @@ class CardMapper extends Component {
         return (
             <div>
                 {cardList}
+                <hr className="cardMapperHR"></hr>
                 <CreateCard listID={listID} addCard={this.addCard} />
             </div>
         )

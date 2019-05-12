@@ -1,0 +1,92 @@
+.CardDisplay{
+    margin: 1.5vh 1vw;
+    background: #e8e8e8;
+    border-radius: 4px;
+}
+
+/* DISPLAYS IF "EDIT" IS FALSE */
+.nonEditCard {
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.nonEditTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5vh;
+}
+
+.nonEditH3 {
+    color: #2D3142;
+    font-weight: 700;
+    width: 80%;
+}
+
+.nonEditEdit {
+    width: 20%;
+    border: 1px solid #2D3142;
+    background: #EF8354;
+    color: #2D3142;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.cardHR {
+    border: 0;
+    height: 2px;
+    width: 100%;
+    background: #4F5D75;
+}
+
+.nonEditBottom {
+    margin-top: .5vh;
+    color: #2D3142;
+}
+
+/* DISPLAYS IF "EDIT" IS TRUE */
+.editCard {
+    padding: 1vh 1vw;
+}
+
+.editCardForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.editCardInput {
+    font-weight: 700;
+    border: 1px solid #2D3142;
+    border-bottom: none;
+    background: #e8e8e8;
+}
+
+.editCardArea {
+    border: 1px solid #2D3142;
+    border-bottom: none;
+    background: #e8e8e8;
+    resize: vertical;
+}
+
+.editCardFormButtons {
+    display: flex;
+}
+
+.editCardSubmit {
+    text-transform: uppercase;
+    width: 80%;
+    border: 1px solid #2D3142;
+    border-right: none;
+    font-weight: 700;
+    color: #e8e8e8;
+    background: #4F5D75;
+}
+
+.editCardDelete {
+    text-transform: uppercase;
+    width: 20%;
+    border: 1px solid #2D3142;
+    border-left: none; 
+    font-weight: 700;
+    background: #EF2D56;
+}

@@ -1,0 +1,7 @@
+.ListMapper {
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    height: 90vh;
+    overflow-x: auto;
+}
